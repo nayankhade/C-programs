@@ -9,28 +9,27 @@ void main()
     scanf("%d %d", &n1, &n2);
     lcm_gcd(n1, n2);
 }
-
 void lcm_gcd(int n1, int n2)
 {
-    int gcd, lcm, remainder, numerator, denominator;
+    int gcd, lcm, rem, a, b;
     if (n1 > n2)
     {
-        numerator = n1;
-        denominator = n2;
+        a = n1;
+        b = n2;
     }
     else
     {
-        numerator = n2;
-        denominator = n1;
+        a = n2;
+        b = n1;
     }
-    remainder = numerator % denominator;
-    while (remainder != 0)
+    rem = a % b;
+    while (rem != 0)
     {
-        numerator = denominator;
-        denominator = remainder;
-        remainder = numerator % denominator;
+        a = b;
+        b = rem;
+        rem = a % b;
     }
-    gcd = denominator;
+    gcd = b;
     lcm = n1 * n2 / gcd;
 
     printf("GCD of %d and %d = %d\n", n1, n2, gcd);
