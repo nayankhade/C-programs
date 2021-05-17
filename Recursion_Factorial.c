@@ -4,10 +4,13 @@ long int factorial(int n)
     int i;
     long int fact = 1;
     if (n == 0)
+    {
         return 1;
-    for (i = n; i > 1; i--)
-        fact = fact * i;
-    return fact;
+    }
+    else
+    {
+        return fact = n * factorial(n - 1);
+    }
 }
 int main()
 {
