@@ -1,5 +1,4 @@
 // C code to illustrate isalphanum()
-#include <ctype.h>
 #include <stdio.h>
 int ttl_alphanumeric(int i, int counter);
 int main()
